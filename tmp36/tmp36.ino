@@ -9,14 +9,12 @@ void setup()
 void loop()                    
 {
   int lectura = analogRead(sensor_de_temperarura);  
-  float voltage = lectura * 5.0; //5.0 es el voltage que trabaja en arduino.
+  float voltage = lectura * 5.0; //5.0 es el voltage que trabaja con Arduino.
   
-  //float permite valores de 32 bits
-  //Números de 3.4028235E+38 a -3.4028235E+38
-  //3.4028235E+38 = 3.4028235 x 10 a la 38 = 3532.130793
+  //Float permite valores de 32 bits con punto flotante.
+  //Números de 3.4028235E+38 a -3.4028235E+38.
+  //3.4028235E+38 = 3.4028235 x 10 a la 38 potencia = 3532.130793
   //6 decimales de precisión.
-  
-  
   
   voltage /= 1024.0; //esto es igual a voltage = voltage / 1024.0
   float temperatura = (voltage - 0.5) * 100 ;  
